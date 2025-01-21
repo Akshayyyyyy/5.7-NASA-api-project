@@ -1,0 +1,114 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #0d1117;
+   color: #c9d1d9;
+ }
+ 
+ header {
+   text-align: center;
+   padding: 1rem 0;
+   background-color: #161b22;
+   color: #58a6ff;
+ }
+ 
+ main {
+   padding: 2rem;
+ }
+ 
+ h1{
+   margin: 0.5rem 0;
+ }
+
+ h2{
+  margin : 1rem;
+ }
+ 
+ section {
+   margin-bottom: 2rem;
+ }
+ 
+ .apod-container {
+   display: flex;
+ 
+   gap: 2rem;
+   margin-bottom: 2rem;
+ }
+ 
+ .apod-image {
+  
+   max-width: 600px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .apod-details {
+  line-height: 1.5rem;
+   max-width: 700px;
+ }
+ 
+ .apod-gallery {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+ }
+ 
+ .gallery-image {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   border-radius: 8px;
+   transition: transform 0.3s;
+ }
+ 
+ .gallery-image:hover {
+   transform: scale(1.1);
+ }
+
+ /* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900%;
+}
+
+#caption {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+ 
+
+ 
