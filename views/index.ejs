@@ -48,7 +48,30 @@
                     <div id="caption"></div>
                 </div>
         </div>
-      </section>
+    </section>
+    <!-- SpaceX launches section -->
+    <section class="spacex">
+        <h2>Upcoming SpaceX Launches</h2>
+        <div class="next-launch">
+            <h3>Next Launch: <%= nextLaunch.name %></h3>
+            <p>Rocket: <%= nextLaunch.rocket %></p>
+            <p>Launchpad: <%= nextLaunch.launchpad %></p>
+            <p>Time:  <%= nextLaunch.date_utc %></p>
+            <p>Details: <% nextLaunch.details || 'No details available'  %></p>
+        </div>
+        <div class="launch-list">
+            <% upcomingLaunches.forEach(launch => { %>
+            <div class="launch-card">
+                <h4><%= launch.name %></h4>
+                <p>Rocket: <%= launch.rocket%></p>
+                <p>Launchpad: <%= launch.launchpad %></p>
+                <p>Time: <%= launch.date_utc %></p>
+                <p>Details: <%= launch.details || 'No details available'  %></p>
+            </div>
+        <% }) %>
+        </div>              
+    </section>
+</main>
     <script src="/scripts/script.js"></script>
   </body>
 </html>
