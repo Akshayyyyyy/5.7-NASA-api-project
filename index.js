@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 // NASA API Setup
 const nasaUrl = 'https://api.nasa.gov/planetary/apod';
-const nasaApiKey = 'YsekNWZ4I8spQrWPkJ8AOFaNKwVGsytlGFLCFbX1'
+const nasaApiKey = 'enter your API key'
 
 // SpaceX url Setup
 const spaceXUrl = 'https://api.spacexdata.com/v5/launches/upcoming';
