@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function openModal(imageUrl, title) {
     var modal = document.getElementById("imageModal");
     var modalImage = document.getElementById("modalImage");
@@ -7,9 +8,10 @@ function openModal(imageUrl, title) {
     modal.style.display = "block";
     modalImage.src = imageUrl;
     caption.innerHTML = title;
-  }
+}
 
-  function closeModal() {
-    var modal = document.getElementById("imageModal");
-    modal.style.display = "none";
-  }
+
+function closeModal() {
+  var modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
