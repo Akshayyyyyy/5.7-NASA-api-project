@@ -1,6 +1,7 @@
 //Pass the data (apod, pastApods, nextLaunch, and upcomingLaunches) to the EJS template.
 import express from 'express';
 import axios from 'axios';
+require('dotenv').config();
  
 const app = express();
 const PORT = 3000;
@@ -10,7 +11,7 @@ app.use(express.static('public'));
 
 // NASA API Setup
 const nasaUrl = 'https://api.nasa.gov/planetary/apod';
-const nasaApiKey = 'YsekNWZ4I8spQrWPkJ8AOFaNKwVGsytlGFLCFbX1'
+const nasaApiKey = process.env.NASA_API_KEY;
 
 // SpaceX url Setup
 const spaceXUrl = 'https://api.spacexdata.com/v5/launches/upcoming';
