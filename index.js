@@ -1,13 +1,16 @@
 //Pass the data (apod, pastApods, nextLaunch, and upcomingLaunches) to the EJS template.
 import express from 'express';
 import axios from 'axios';
-require('dotenv').config();
- 
+import dotenv from 'dotenv';
+
 const app = express();
 const PORT = 3000;
 
 // Make public folder static
 app.use(express.static('public'));
+
+// Configure dotenv
+dotenv.config();
 
 // NASA API Setup
 const nasaUrl = 'https://api.nasa.gov/planetary/apod';
