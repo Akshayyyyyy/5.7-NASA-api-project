@@ -20,11 +20,11 @@ const spaceXUrl = 'https://api.spacexdata.com/v5/launches/upcoming';
 
 // GET route that fetches data from both NASA and SpaceX APIs
 app.get('/', async (req, res)=>{
-    // fix date
-    const date = req.query.date || '2025-01-20';
+     // Capture date query parameter, fallback to current UTC date if not provided
+    const date = req.query.date || new Date().toISOString().split('T')[0];
     try{
         // Fetch NASA current image data first
-        const response = await axios.get(`${nasaUrl}?api_key=${nasaApiKey}&date=${date}`);
+        const response = await axios.get(`${nasaUrl}?api_key=${nasaApiKey}${date ? `&date=${date}` : ''}`);
         const currentApod = response.data;
         
         // Setup for past date to get previous images
@@ -49,7 +49,7 @@ app.get('/', async (req, res)=>{
             upcomingLaunches
         });
     } catch(error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error.response?.data || error.message);
         res.status(500).send('Something went wrong');
     }
 })
