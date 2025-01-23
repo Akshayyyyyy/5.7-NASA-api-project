@@ -1,4 +1,3 @@
-//Pass the data (apod, pastApods, nextLaunch, and upcomingLaunches) to the EJS template.
 import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv';
